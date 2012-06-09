@@ -1,5 +1,4 @@
 require "rubygems/command"
-require "tmpdir"
 require 'exefy'
 
 module Gem
@@ -8,7 +7,7 @@ module Gem
       def initialize
         super 'exefy', "Replaces Gem's batch file with executable file (Windows only)"
         add_option('-b', '--backup-batch-files', 
-                   'Keep backup of old batch files') do |value, options|
+               'Keep backup of old batch files') do |value, options|
           options[:backup_batch_files] = value
         end
       end
